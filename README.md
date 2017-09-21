@@ -56,3 +56,15 @@ A partir de testes foram encontrados valores ideais para as contantes kp, ki e k
 
 As funções de movimento são definidas a partir do entendimento do driver de ponte H utilizado. Sendo cada uma dessas funções relacionadas ao movimento realizado pelos motores.
 
+# Sensor de Linha
+
+O sensor de linha possui 3 portas distintas uma para as posições esquerda(L), centro(C) e direita(R), sendo elas associadas a um sensor que detecta a presença da linha e manda a informação caso a linha seja encontrada.
+
+![sku_204012_3](https://user-images.githubusercontent.com/31252029/30711190-5bf0311c-9ede-11e7-9e62-7a50112d8572.jpg)
+
+Figura 4 – Sensor de Linha utilizado.
+
+No caso deste projeto as portas L, C e R foram associadas as portas 12, 2 e 4 respectivamente do arduino, como pode ser visto no programa.
+
+
+
