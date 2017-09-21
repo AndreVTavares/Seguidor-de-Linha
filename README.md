@@ -9,7 +9,8 @@ O objetivo deste trabalho é  mostrar a aplicação de conhecimentos adquiridos 
 
  Controlador PID -  Controlador proporcional integral derivativo, é uma técnica de controle de processos que une as ações derivativa, integral e proporcional, fazendo assim com que o sinal de erro seja minimizado pela ação proporcional, zerado pela ação integral e obtido com uma velocidade antecipativa pela ação derivativa. 
 
- O algoritmo PID pode ser definido por : 
+ O algoritmo PID pode ser definido por :   
+                                                  ![alt tag](./images/image1.jpg)
 
                                                   Figura 1- Expressão para o controlador PID
 
