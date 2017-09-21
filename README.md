@@ -66,6 +66,20 @@ Figura 4 – Sensor de Linha utilizado.
 
 No caso deste projeto as portas L, C e R foram associadas as portas 12, 2 e 4 respectivamente do arduino, como pode ser visto no programa.
 
+# Uso do Controlador PID
+
+O uso do controlador PID se resumiu ao calculo inserido no programa, o caluclo em questão é o V = (300* l + 200 * c + 100 * r)/(l+c+r), onde as variáveis l, r e c são as referidas do sensor de linha como abordato acima. As possibilidades de resultado de cada variavel é HIGH ou LOW, resultando em um valor diferenciado para o V dependendo de qual sensor estiver ligado no momento do calculo. O V então é diminuido de um SetPoint, este definido 200 a partir de testes, para então encontrar um erro.
+
+O erro é utilizado para o calculo das tres variaveis do controlador PID, sendo elas P, I e D. Onde nesses calculos então inseridos as constantes kp, ki e kd para o P, I e D respectivamente. 
+
+as formulas de cada variavel são:
+
+P = erro * kp
+I += erro* dt * ki
+D = (kd*(V - Va))/dt
+
+As variaveis kp, ki e kd são definidas por testes realizados nas pistas de teste. O kp foi achado de maneira bem simples, sendo o mais fácil dos tres de se encontrar um valor adequado para o propósito. O mais difícil foram as combinações ki e kd pois os dois são complementos e se não encontrado um valor razoavel o carro tinha movimentos instáveis.
+
 # Conclusões
 
 Foi possível concluir com o trabalho que para uma melhor estabilidade no robô seguidor de linha fez-se necessário o uso do controlador PID que contém as três funções. Percebemos que dependendo das constantes pode-se melhorar ou piorar a estabilidade do sistema.
