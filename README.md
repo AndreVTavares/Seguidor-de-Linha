@@ -66,5 +66,11 @@ Figura 4 – Sensor de Linha utilizado.
 
 No caso deste projeto as portas L, C e R foram associadas as portas 12, 2 e 4 respectivamente do arduino, como pode ser visto no programa.
 
+# Conclusões
+
+Foi possível concluir com o trabalho que para uma melhor estabilidade no robô seguidor de linha fez-se necessário o uso do controlador PID que contém as três funções. Percebemos que dependendo das constantes pode-se melhorar ou piorar a estabilidade do sistema.
+
+
+
 
 
