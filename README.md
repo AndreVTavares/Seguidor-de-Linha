@@ -29,3 +29,30 @@ A ação derivativa produz um sinal de saída que é proporcional à velocidade 
 
 Figura 2 – Controlador PID
 
+# Materiais e equipamentos necessários:
+1 Arduino Duemilanove 
+
+1 Drive ponte H
+
+2 Motores cc 
+ 
+1 Chassi de Carro didático 
+
+1 Fonte 
+
+1 Modulo sensor de linha 
+
+Cabos para conexão 
+
+# Procedimentos
+
+Primeiramente no codigo foram definitas todas as portas do arduino as quais seriam usadas, sendo as portas pwn utilizadas para as ligações com o driver de ponte H utilizado para realizar os movimentos dos motores ligados as duas rodas do carro didático. As ligações entre o arduino e o driver podem ser vista na figura abaixo:
+
+ ![dazzling waasa-gaaris](https://user-images.githubusercontent.com/31252029/30709808-da4277aa-9ed9-11e7-8918-85f0b12c2f7d.png)
+
+Figura 3 – Ligações do Arduino com o Driver ponte H.
+
+A partir de testes foram encontrados valores ideais para as contantes kp, ki e kd, estas vistas no programa, definindo assim uma melhor resposta quando exigido o processamento do sensor.
+
+As funções de movimento são definidas a partir do entendimento do driver de ponte H utilizado. Sendo cada uma dessas funções relacionadas ao movimento realizado pelos motores.
+
