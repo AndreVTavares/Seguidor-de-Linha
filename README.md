@@ -24,6 +24,8 @@ Ação Derivatira
 A ação derivativa produz um sinal de saída que é proporcional à velocidade de variação do erro, fornece uma correção antecipada diminuindo o tempo de resposta e melhorando a estabilidade do sistema.
 
 
- 
+
+![image2](https://user-images.githubusercontent.com/31252029/30706488-e4f2ee9c-9ece-11e7-924c-ecf91b762f9f.jpg)
+
 Figura 2 – Controlador PID
 
