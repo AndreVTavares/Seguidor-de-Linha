@@ -44,6 +44,12 @@ Figura 2 – Controlador PID
 
 Cabos para conexão 
 
+![img_20170921_204358805](https://user-images.githubusercontent.com/31252029/30815025-4764bae4-a1e8-11e7-95c2-775de0e097e2.jpg)
+![img_20170921_204403664_hdr](https://user-images.githubusercontent.com/31252029/30815036-565e111c-a1e8-11e7-9e62-f10c5ff6af5e.jpg)
+![img_20170921_204408318](https://user-images.githubusercontent.com/31252029/30815047-62152fae-a1e8-11e7-93b4-485b415cbbb2.jpg)
+
+![img_20170921_204422151](https://user-images.githubusercontent.com/31252029/30815063-70770f7c-a1e8-11e7-8855-d663feea1df7.jpg)
+
 # Procedimentos
 
 Primeiramente no codigo foram definitas todas as portas do arduino as quais seriam usadas, sendo as portas pwn utilizadas para as ligações com o driver de ponte H utilizado para realizar os movimentos dos motores ligados as duas rodas do carro didático. As ligações entre o arduino e o driver podem ser vista na figura abaixo:
@@ -79,6 +85,14 @@ I += erro* dt * ki
 D = (kd*(V - Va))/dt
 
 As variaveis kp, ki e kd são definidas por testes realizados nas pistas de teste. O kp foi achado de maneira bem simples, sendo o mais fácil dos tres de se encontrar um valor adequado para o propósito. O mais difícil foram as combinações ki e kd pois os dois são complementos e se não encontrado um valor razoavel o carro tinha movimentos instáveis.
+
+O resultado do calculo da variavel V é então subtraido do setPoint escolhido( no caso 200 ) para achar o valor do erro. Este erro encontrado será o utilizado nas equações acima para achar as variaveis P, I e D. Com os resultados definidos é realizado outro calculo para definir os valores que irão alimentar as funções definidas para cada movimento, sendo elas: frente, direita, esquerda e trás. As variaveis x e y são calculadas com os valores encontrados para P, I e D:
+
+x = constante + (P + I + D).
+
+y = constante - (P + I + D).
+
+Essa constante utilizada tambem foi definida a partir de testes realizados buscando melhor otimização na hora do deslocamento realizado pelo carro.
 
 # Conclusões
 
