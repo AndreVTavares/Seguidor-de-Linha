@@ -21,8 +21,9 @@
   int x;  // variavel do motor a
   int y;  // variavel do motor b
   //float kp = 1.0 , ki = 0.0005, kd = 5;  // constantes referentes ao controlador PID, sendo kp,ki e kd para P I e D respectivamente.
-  float kp = 2 , ki = 0, kd = 0;// pista U 
-                                       // pista H
+  float kp=2,ki=0.0015,kd=110;          // pista U 
+  float kp = 2.5 , ki = 0.005, kd = 200 // pista H
+  float kp=2,ki=0.0015,kd=110           // pista W
   int erro;
   int Va;  
   int t = 0, ta = 0, dt = 0;
